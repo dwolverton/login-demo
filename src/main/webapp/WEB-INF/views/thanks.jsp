@@ -10,6 +10,8 @@
 <body>
 	<h1>Thanks for signing up</h1>
 	
+	Welcome ${ user.name }!
+	
 	<a href="/">Home</a>
 </body>
 </html>

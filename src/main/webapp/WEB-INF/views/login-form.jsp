@@ -5,14 +5,17 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Sign Up</title>
+<title>Log in</title>
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
-	<h1>Sign Up!</h1>
-	<form action="/signup-confirmation" autocomplete="off" >
-	<p>
-		<label>Name</label> <input name="name" />
-	</p>
+	<h1>Log in</h1>
+	
+	<c:if test="${ not empty message }">
+		<p class="message">${ message }</p>
+	</c:if>
+	
+	<form action="/login" method="post" autocomplete="off" >
 	<p>
 		<label>Email</label> <input type="email" name="email" required />
 	</p>
@@ -20,7 +23,7 @@
 		<label>Password</label> <input type="password" name="password" required />
 	</p>
 	<p>
-		<button type="submit">Sign Up!</button>
+		<button type="submit">Log in</button>
 	</p>
 	</form>
 </body>
